@@ -3,7 +3,6 @@
 # Decentralized Delivery (DeDe) Protocol
 
 
-
 ## Legal Disclaimer
 
 This repository contains general-purpose, open-source smart contracts.  

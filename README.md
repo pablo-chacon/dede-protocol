@@ -86,6 +86,9 @@ It contains only the canonical protocol implementation.
 
 Apps, UIs, APIs, routing engines, carrier apps, and SDKs live in separate repositories.
 
+DeDe Quick-Start Templates:
+[https://github.com/pablo-chacon/dede-templates](https://github.com/pablo-chacon/dede-templates)
+
 ---
 
 ## **Quick Start (Local)**
@@ -173,6 +176,10 @@ Official contract addresses (fill these once deployed):
 * `protocolTreasury`: `0x...`
 
 To integrate, simply point your application or marketplace to these contract addresses.
+
+DeDe Quick-Start Templates:
+[https://github.com/pablo-chacon/dede-templates](https://github.com/pablo-chacon/dede-templates)
+
 
 ---
 

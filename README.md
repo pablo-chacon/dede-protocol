@@ -150,7 +150,7 @@ Any delivery app can adopt it without DeDe adopting your architecture.
 
 ---
 
-# **Canonical Deployment (Recommended for All Integrators)**
+# **Official Canonical Deployment (Recommended for All Integrators)**
 
 DeDe Protocol official, on-chain canonical deployment.
 This deployment includes the immutable 0.5% protocol fee, which supports ongoing audits, tooling, SDKs, and ecosystem maintenance.

@@ -1,2 +1,5 @@
 .env
-
+lib
+/out
+/broadcast
+/cache

@@ -67,17 +67,20 @@ DeDe Quick-Start Templates:
 ## **Repo Structure**
 
 ```
+.
+├── contracts
+│   ├── AStarSignerRegistryStaked.sol
+│   ├── Escrow.sol
+│   └── ParcelCore.sol
 ├── docs
+│   ├── DeDe-FAQ.md
 │   └── integration
 │       └── multi-currency.md
+├── foundry.lock
 ├── foundry.toml
 ├── README.md
 ├── script
 │   └── DeployProtocol.s.sol
-├── src
-│   ├── AStarSignerRegistryStaked.sol
-│   ├── Escrow.sol
-│   └── ParcelCore.sol
 ├── test
 │   └── MockERC20.sol
 └── WHITEPAPER.md

@@ -19,9 +19,9 @@ contract AStarSignerRegistryStaked is Ownable2Step {
   event Withdrawn(address signer, uint256 amount);
 
   constructor(address _stakeToken, uint256 _minStake)
-    Ownable(msg.sender)                      // call base Ownable constructor
+    Ownable(msg.sender) // call base Ownable constructor
   {
-    stakeToken = IERC20(_stakeToken);        // init immutable
+    stakeToken = IERC20(_stakeToken); // init immutable
     minStake   = _minStake;
   }
 

@@ -72,8 +72,8 @@ DeDe Quick-Start Templates:
 │   ├── AStarSignerRegistryStaked.sol
 │   ├── Escrow.sol
 │   └── ParcelCore.sol
+├── DeDe-FAQ.md
 ├── docs
-│   ├── DeDe-FAQ.md
 │   └── integration
 │       └── multi-currency.md
 ├── foundry.lock

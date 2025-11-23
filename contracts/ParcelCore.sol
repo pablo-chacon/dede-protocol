@@ -101,7 +101,7 @@ contract ParcelCore is ERC721, Ownable2Step {
     uint16  _protocolCutBps  // e.g. 50 for 0.5%
   )
     ERC721("DeDeParcel", "DEDE")
-    Ownable(msg.sender)              // 👈 NEW: set initial owner
+    Ownable(msg.sender)              // Set initial owner
   {
     require(_protocolTreasury != address(0), "proto-zero");
     require(_protocolCutBps > 0 && _protocolCutBps < 200, "proto-bps-cap"); // <2%
@@ -112,8 +112,7 @@ contract ParcelCore is ERC721, Ownable2Step {
   }
 
 
-  // ---- Admin (platform fees & tip) ----
-
+  // Admin
   function setPlatformTreasury(address t) external onlyOwner {
     platformTreasury = t;
   }

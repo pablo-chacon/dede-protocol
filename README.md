@@ -42,7 +42,7 @@ Start building:
 * ERC-721 parcels  
 * Pickup -> dropoff -> finalize lifecycle  
 * Automatic finalization after 72h if neither side finalizes  
-* Immutable protocol fee (0.5%) paid to `protocolTreasury`  
+* Immutable Transaction fee (0.5%) paid to `protocolTreasury`  
 * Dynamic platform fee (3% -> 22%) paid to `platformTreasury`  
 * Permissionless finalization with a 0.05% finalizer tip  
 * Full slashing support through signer registry  
@@ -52,7 +52,7 @@ Start building:
 
 * Holds user funds until parcel completion  
 * Releases value automatically based on parcel state transitions  
-* Protocol and platform fees taken at payout time  
+* Protocol and Transaction fees taken at payout time  
 * Trusted by `ParcelCore` only  
 
 ### **3. AStarSignerRegistryStaked: oracle/signer registry**
@@ -131,7 +131,7 @@ forge script script/DeployProtocol.s.sol:DeployProtocol \
 
 ## **Security Model**
 
-* Protocol fee is immutable and cannot be changed post-deploy
+* Transaction fee is immutable and cannot be changed post-deploy
 * Platform fee can be tuned by the platform operator
 * `owner` of `ParcelCore` should be:
 
@@ -158,7 +158,7 @@ Any delivery app can adopt it without DeDe adopting your architecture.
 # **Official Canonical Deployment (Recommended for All Integrators)**
 
 DeDe Protocol official, on-chain canonical deployment.
-This deployment includes the immutable 0.5% protocol fee, which supports ongoing audits, tooling, SDKs, and ecosystem maintenance.
+This deployment includes the immutable 0.5% transaction fee, which supports ongoing audits, tooling, SDKs, and ecosystem maintenance.
 
 Integrators are encouraged to use this **official DeDe Protocol deployment** because:
 
@@ -187,7 +187,6 @@ To integrate, simply point your application or marketplace to these contract add
 
 DeDe Quick-Start Templates:
 [https://github.com/pablo-chacon/dede-templates](https://github.com/pablo-chacon/dede-templates)
-
 
 ---
 

@@ -26,7 +26,9 @@ By using, deploying, integrating, or interacting with this software in any form,
 ## **DeDe Protocol: Trustless, Universal Delivery Settlement (Etherum-Mainnet)**
 
 **DeDe Protocol** is a minimal, self-contained, production-ready settlement layer for decentralized delivery networks.
-Peer-to-Peer Parcel -> Pickup -> Dropoff -> Delivery confirmation.  
+
+**Peer-to-Peer Parcel** -> Pickup -> Dropoff -> Delivery confirmation.  
+
 It implements the core rails that any delivery app, marketplace, or logistics platform can build on top of without dictating UI, routing logic, or business models.
 
 This repository contains only the immutable smart contracts, the deploy script, and the mock token used in tests.

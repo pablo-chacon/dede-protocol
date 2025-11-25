@@ -2,6 +2,9 @@
 
 # Decentralized Delivery (DeDe) Protocol
 
+**Peer-to-Peer Parcel Protocol**
+
+---
 
 ## Legal Disclaimer
 

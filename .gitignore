@@ -1,5 +1,5 @@
 .env
-lib
+/lib
 /out
 /broadcast
 /cache

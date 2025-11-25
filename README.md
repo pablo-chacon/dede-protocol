@@ -173,20 +173,14 @@ Integrators are encouraged to use this **official DeDe Protocol deployment** bec
 
 ---
 
-**Official contract addresses (Ethereum Mainnet)**
+### Official contract address (Ethereum Mainnet)
 
-  * ParcelCore: 0xeF1D4970c3B988840B13761Ec4FBb85106d789F8
+DeDeParcel: **0xeF1D4970c3B988840B13761Ec4FBb85106d789F8**
+  
+---
 
-  * Escrow: 0x834317eFB2E6eE362a63474837398086cC302934
-
-  * AStarSignerRegistryStaked: 0x311A4c3Ed79D4467C55dd7CEE0C731501DF3f161
-
-  * protocolTreasury: 0x9C34d6a6BF1257A9e36758583cDC36F4cE2fA78F
-
-To integrate, simply point your application or marketplace to these contract addresses.
-
-DeDe Quick-Start Templates:
-[https://github.com/pablo-chacon/dede-templates](https://github.com/pablo-chacon/dede-templates)
+### DeDe Quick-Start Templates:
+**[https://github.com/pablo-chacon/dede-templates](https://github.com/pablo-chacon/dede-templates)**
 
 ---
 

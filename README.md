@@ -2,7 +2,7 @@
 
 # Decentralized Delivery (DeDe) Protocol
 
-**Peer-to-Peer Parcel Protocol**
+**Denctralized Crowdshipping Protocol (Peer-to-Peer Parcel)**
 
 ---
 

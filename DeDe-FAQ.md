@@ -39,6 +39,21 @@ This fee structure is **immutable** and enforced **on-chain** by the smart contr
 
 ---
 
+## **Centralized P2P Crowdshipping VS DeDe (P2P Decentralized Delivery)**
+
+| **System Function**       | **Centralized Platforms (Uber / DoorDash / Amazon Flex)** | **DeDe Protocol (Decentralized Delivery)**    |
+| ------------------------- | --------------------------------------------------------- | --------------------------------------------- |
+| **Identity**              | User identity controlled by the platform                  | Off-chain identity (wallet, KYC, or none)     |
+| **Matching / Assignment** | Platform assigns and controls job visibility              | Open matching; integrators choose logic       |
+| **Parcel Lifecycle**      | Private backend, mutable state                            | On-chain immutable state machine              |
+| **Escrow / Settlement**   | Company-controlled funds, reversible payouts              | Trustless on-chain escrow, automatic payout   |
+| **Fees**                  | Platform can change fees anytime                          | Immutable protocol fee + visible platform fee |
+| **Routing**               | Proprietary black-box algorithms                          | Any routing engine (A*, MAPF, ML, custom)     |
+| **Disputes**              | Opaque centralized arbitration                            | Auto-finalization + permissionless finalize   |
+| **Data Ownership**        | Platform owns and monetizes movement + behavioral data    | Neutral infrastructure, no data extraction    |
+
+---
+
 ## What if someone builds an app on top of DeDe?
 
 DeDe does **not control** apps, fees, or business models.

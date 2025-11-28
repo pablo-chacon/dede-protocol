@@ -26,7 +26,7 @@ By using, deploying, integrating, or interacting with this software in any form,
 
 ---
 
-## **Centralized Crowdshipping VS DeDe (Decentralized Delivery)**
+## **Centralized P2P Crowdshipping VS DeDe (P2P Decentralized Delivery)**
 
 | **System Function**       | **Centralized Platforms (Uber / DoorDash / Amazon Flex)** | **DeDe Protocol (Decentralized Delivery)**    |
 | ------------------------- | --------------------------------------------------------- | --------------------------------------------- |

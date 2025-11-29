@@ -51,8 +51,17 @@ It implements the core rails that any delivery app, marketplace, or logistics pl
 
 This repository contains only the immutable smart contracts, the deploy script, and the mock token used in tests.
 
-Start building:
-[DeDe Quick-Start Templates](https://github.com/pablo-chacon/dede-templates)
+---
+
+## **Start building:**
+
+Links to dede-templates repository.
+
+
+**[DeDe Quick-Start Templates](https://github.com/pablo-chacon/dede-templates)**
+
+
+**[DeDe Multi-Currency Integration](https://github.com/pablo-chacon/dede-templates/blob/main/integration/multi-currency.md)** 
 
 ---
 

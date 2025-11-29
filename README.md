@@ -115,8 +115,8 @@ Official DeDe Protocol contract addresses:
 │   └── ParcelCore.sol
 ├── DeDe-FAQ.md
 ├── docs
-│   └── integration
-│       └── multi-currency.md
+│   └── media
+│       └── dede.svg
 ├── foundry.lock
 ├── foundry.toml
 ├── README.md

@@ -85,6 +85,15 @@ Start building:
 
 ---
 
+## **Etherum Mainnet Deployment**
+
+* **ParcelCore:** 0xeF1D4970c3B988840B13761Ec4FBb85106d789F8
+* **Escrow:** 0x834317eFB2E6eE362a63474837398086cC302934
+* **AStarSignerRegistryStaked:** 0x311A4c3Ed79D4467C55dd7CEE0C731501DF3f161
+* **protocolTreasury:** 0x9C34d6a6BF1257A9e36758583cDC36F4cE2fA78F
+
+---
+
 ## **Repo Structure**
 
 ```

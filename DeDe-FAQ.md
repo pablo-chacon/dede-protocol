@@ -21,6 +21,10 @@ These are **neutral protocols**, not platforms. They don’t provide apps, accou
 
 ---
 
+[DeDe Medium Story](https://medium.com/@ekarlsson66/dede-the-delivery-rail-for-a-free-world-e7be944b90fc)
+
+---
+
 ## What does DeDe actually do?
 
 DeDe allows anyone to:

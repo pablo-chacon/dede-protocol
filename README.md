@@ -137,6 +137,11 @@ Apps, UIs, APIs, routing engines, carrier apps, and SDKs live in separate reposi
 
 ## **Quick Start (Local)**
 
+### **Prerequisites**
+
+1. [foundry](https://getfoundry.sh/)
+2. [OpenZeppelin](https://www.openzeppelin.com/)
+
 ### **1. Install and test**
 
 ```bash

@@ -147,11 +147,10 @@ Links to dede-templates repository.
 │   ├── Escrow.sol
 │   └── ParcelCore.sol
 ├── DeDe-FAQ.md
-├── docs
-│   └── media
-│       └── dede.svg
 ├── foundry.lock
 ├── foundry.toml
+├── media
+│   └── dede.svg
 ├── README.md
 ├── script
 │   └── DeployProtocol.s.sol

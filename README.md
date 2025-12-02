@@ -26,6 +26,18 @@ By using, deploying, integrating, or interacting with this software in any form,
 
 ---
 
+## **DeDe Protocol: Trustless, Universal Delivery Settlement (Etherum-Mainnet)**
+
+**DeDe Protocol** is a minimal, self-contained, production-ready settlement layer for decentralized delivery networks.
+
+**Peer-to-Peer Parcel** -> Pickup -> Dropoff -> Delivery confirmation.  
+
+It implements the core rails that any delivery app, marketplace, or logistics platform can build on top of without dictating UI, routing logic, or business models.
+
+This repository contains only the immutable smart contracts, the deploy script, and the mock token used in tests.
+
+---
+
 ## **Etherum Mainnet Deployment**
 
 Official DeDe Protocol contract addresses:
@@ -34,6 +46,29 @@ Official DeDe Protocol contract addresses:
 * **Escrow:** 0x834317eFB2E6eE362a63474837398086cC302934
 * **AStarSignerRegistryStaked:** 0x311A4c3Ed79D4467C55dd7CEE0C731501DF3f161
 * **protocolTreasury:** 0x9C34d6a6BF1257A9e36758583cDC36F4cE2fA78F
+
+---
+
+## **Repo Structure**
+
+```
+.
+├── contracts
+│   ├── AStarSignerRegistryStaked.sol
+│   ├── Escrow.sol
+│   └── ParcelCore.sol
+├── DeDe-FAQ.md
+├── foundry.lock
+├── foundry.toml
+├── media
+│   └── dede.svg
+├── README.md
+├── script
+│   └── DeployProtocol.s.sol
+├── test
+│   └── MockERC20.sol
+└── WHITEPAPER.md
+```
 
 ---
 
@@ -51,19 +86,6 @@ Official DeDe Protocol contract addresses:
 | **Data Ownership**        | Platform owns and monetizes movement + behavioral data    | Neutral infrastructure, no data extraction    |
 
 ---
-
-## **DeDe Protocol: Trustless, Universal Delivery Settlement (Etherum-Mainnet)**
-
-**DeDe Protocol** is a minimal, self-contained, production-ready settlement layer for decentralized delivery networks.
-
-**Peer-to-Peer Parcel** -> Pickup -> Dropoff -> Delivery confirmation.  
-
-It implements the core rails that any delivery app, marketplace, or logistics platform can build on top of without dictating UI, routing logic, or business models.
-
-This repository contains only the immutable smart contracts, the deploy script, and the mock token used in tests.
-
----
-
 
 ## **NFT as a representation of a physical object**
 
@@ -137,28 +159,6 @@ Links to dede-templates repository.
 * Supports A* signatures only  
 
 ---
-
-## **Repo Structure**
-
-```
-.
-├── contracts
-│   ├── AStarSignerRegistryStaked.sol
-│   ├── Escrow.sol
-│   └── ParcelCore.sol
-├── DeDe-FAQ.md
-├── foundry.lock
-├── foundry.toml
-├── media
-│   └── dede.svg
-├── README.md
-├── script
-│   └── DeployProtocol.s.sol
-├── test
-│   └── MockERC20.sol
-└── WHITEPAPER.md
-```
-
 
 This repo is intentionally bare-metal.  
 It contains only the canonical protocol implementation.

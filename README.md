@@ -83,15 +83,15 @@ encrypted or hashed pickup/dropoff info
 DeDe does not “put the package on-chain.” The NFT anchors the parcel’s identity and lifecycle in a verifiable, tamper-proof way.
 If someone tries to spoof it, the metadata won’t match, fraud becomes detectable by design, not by policy.
 
-This same primitive can apply to:
+* This same primitive can apply to:
 
-Title deeds
+* Title deeds
 
-Vehicle ownership
+* Vehicle ownership
 
-Event tickets
+* Event tickets
 
-Physical access credentials
+* Physical access credentials
 
 The NFT model provides a deterministic, auditable, and trustless lifecycle, ideal for physical-world assets that change hands.
 

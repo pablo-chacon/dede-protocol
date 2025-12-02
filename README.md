@@ -26,6 +26,17 @@ By using, deploying, integrating, or interacting with this software in any form,
 
 ---
 
+## **Etherum Mainnet Deployment**
+
+Official DeDe Protocol contract addresses:
+
+* **ParcelCore:** 0xeF1D4970c3B988840B13761Ec4FBb85106d789F8
+* **Escrow:** 0x834317eFB2E6eE362a63474837398086cC302934
+* **AStarSignerRegistryStaked:** 0x311A4c3Ed79D4467C55dd7CEE0C731501DF3f161
+* **protocolTreasury:** 0x9C34d6a6BF1257A9e36758583cDC36F4cE2fA78F
+
+---
+
 ## **Centralized P2P Crowdshipping VS DeDe (P2P Decentralized Delivery)**
 
 | **System Function**       | **Centralized Platforms (Uber / DoorDash / Amazon Flex)** | **DeDe Protocol (Decentralized Delivery)**    |
@@ -50,6 +61,39 @@ By using, deploying, integrating, or interacting with this software in any form,
 It implements the core rails that any delivery app, marketplace, or logistics platform can build on top of without dictating UI, routing logic, or business models.
 
 This repository contains only the immutable smart contracts, the deploy script, and the mock token used in tests.
+
+---
+
+
+## **NFT as a representation of a physical object**
+
+DeDe uses NFTs as non-speculative infrastructure, not for art, not for collectibles.
+
+An NFT is simply a digital record of ownership for something non-fungible (i.e., unique and indivisible).
+Unlike ETH or BTC (which are fungible and can be split), an NFT always refers to one unique object.
+
+In DeDe, the NFT represents a parcel, with metadata like:
+
+parcelId
+
+lifecycleState (e.g., Created, PickedUp, Delivered)
+
+encrypted or hashed pickup/dropoff info
+
+DeDe does not “put the package on-chain.” The NFT anchors the parcel’s identity and lifecycle in a verifiable, tamper-proof way.
+If someone tries to spoof it, the metadata won’t match, fraud becomes detectable by design, not by policy.
+
+This same primitive can apply to:
+
+Title deeds
+
+Vehicle ownership
+
+Event tickets
+
+Physical access credentials
+
+The NFT model provides a deterministic, auditable, and trustless lifecycle, ideal for physical-world assets that change hands.
 
 ---
 
@@ -91,17 +135,6 @@ Links to dede-templates repository.
 * Mandatory stake  
 * Slashing on misconduct  
 * Supports A* signatures only  
-
----
-
-## **Etherum Mainnet Deployment**
-
-Official DeDe Protocol contract addresses:
-
-* **ParcelCore:** 0xeF1D4970c3B988840B13761Ec4FBb85106d789F8
-* **Escrow:** 0x834317eFB2E6eE362a63474837398086cC302934
-* **AStarSignerRegistryStaked:** 0x311A4c3Ed79D4467C55dd7CEE0C731501DF3f161
-* **protocolTreasury:** 0x9C34d6a6BF1257A9e36758583cDC36F4cE2fA78F
 
 ---
 
@@ -217,12 +250,6 @@ Integrators are encouraged to use this **official DeDe Protocol deployment** bec
 3. **Sustainability**
    The immutable protocol fee funds maintenance without affecting platform economics.
 
----
-
-### Official contract address (Ethereum Mainnet)
-
-DeDeParcel: **0xeF1D4970c3B988840B13761Ec4FBb85106d789F8**
-  
 ---
 
 ### DeDe Quick-Start Templates:

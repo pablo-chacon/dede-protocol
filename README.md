@@ -49,6 +49,18 @@ Official DeDe Protocol contract addresses:
 
 ---
 
+## **Start building:**
+
+Links to dede-templates repository.
+
+
+**[DeDe Quick-Start Templates](https://github.com/pablo-chacon/dede-templates)**
+
+
+**[DeDe Multi-Currency Integration](https://github.com/pablo-chacon/dede-templates/blob/main/integration/multi-currency.md)** 
+
+---
+
 ## **Repo Structure**
 
 ```
@@ -116,18 +128,6 @@ If someone tries to spoof it, the metadata won’t match, fraud becomes detectab
 * Physical access credentials
 
 The NFT model provides a deterministic, auditable, and trustless lifecycle, ideal for physical-world assets that change hands.
-
----
-
-## **Start building:**
-
-Links to dede-templates repository.
-
-
-**[DeDe Quick-Start Templates](https://github.com/pablo-chacon/dede-templates)**
-
-
-**[DeDe Multi-Currency Integration](https://github.com/pablo-chacon/dede-templates/blob/main/integration/multi-currency.md)** 
 
 ---
 

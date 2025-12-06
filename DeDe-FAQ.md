@@ -101,6 +101,11 @@ They only convert value to an ERC-20 token when entering DeDe escrow.
 
 DeDe stays minimal and the payment system stays off-chain.
 
+**[DeDe Multi-Currency DeFI Integration](https://github.com/pablo-chacon/dede-templates/blob/main/integration/multi-currency.md)** 
+
+
+**[DeDe Multi-Currency CeFi Integration](https://github.com/pablo-chacon/dede-templates/blob/main/integration/multi-currency-cefi.md)**
+
 ---
 
 ## How do carriers choose what to deliver?

@@ -92,6 +92,17 @@ Those are built by others. DeDe **only handles settlement**.
 
 ---
 
+## Is DeDe tied to crypto payments?
+
+No. DeDe is DeFi and CeFi agnostic.
+
+Platforms can accept any currency and settle however they prefer.
+They only convert value to an ERC-20 token when entering DeDe escrow.
+
+DeDe stays minimal and the payment system stays off-chain.
+
+---
+
 ## How do carriers choose what to deliver?
 
 Carriers can:

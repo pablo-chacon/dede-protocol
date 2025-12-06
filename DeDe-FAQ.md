@@ -211,3 +211,6 @@ Apps, dApps and marketplaces can build on top of it, but DeDe itself will always
 
 ---
 
+**[Contact Email](pablo-chacon-ai@proton.me)**
+
+

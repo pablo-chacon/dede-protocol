@@ -340,3 +340,5 @@ DeDe Protocol is a canonical, minimal implementation of a **trustless delivery s
 It is not a product or company; it is **neutral infrastructure**. Anyone can audit, fork, or deploy it. What gets built on top of it, and how that is governed, regulated, and monetized, is entirely up to the communities and organizations that choose to use it.
 
 ---
+
+**[Contact Email](pablo-chacon-ai@proton.me)**

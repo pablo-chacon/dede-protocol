@@ -33,6 +33,7 @@ DeDe is designed to be:
 
 * **Minimal**: One small, composable settlement layer; no monolithic “all-in-one” stack.
 * **Neutral**: DeDe is not a marketplace, front-end, or employer; it is just code.
+* **DeFi/CeFi Agnostic**: Only convert value to an ERC-20 token.
 * **Permissionless**: Anyone can mint parcels, act as a carrier, or build apps on top.
 * **Composable**: Any off-chain routing engine (A*, MAPF, ML, or custom logic) can be plugged in.
 * **Predictable**: Protocol fee is immutable; platform fees are explicit and bounded in BPS.

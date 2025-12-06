@@ -57,7 +57,10 @@ Links to dede-templates repository.
 **[DeDe Quick-Start Templates](https://github.com/pablo-chacon/dede-templates)**
 
 
-**[DeDe Multi-Currency Integration](https://github.com/pablo-chacon/dede-templates/blob/main/integration/multi-currency.md)** 
+**[DeDe Multi-Currency DeFI Integration](https://github.com/pablo-chacon/dede-templates/blob/main/integration/multi-currency.md)** 
+
+
+**[DeDe Multi-Currency CeFi Integration](https://github.com/pablo-chacon/dede-templates/blob/main/integration/multi-currency-cefi.md)**
 
 ---
 

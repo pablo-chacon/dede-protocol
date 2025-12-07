@@ -32,9 +32,11 @@ By using, deploying, integrating, or interacting with this software in any form,
 
 **Peer-to-Peer Parcel** -> Pickup -> Dropoff -> Delivery confirmation.  
 
-It implements the core rails that any delivery app, marketplace, or logistics platform can build on top of without dictating UI, routing logic, or business models.
+**Defi/CeFi Agnostic:**
+Easy integration of delivery settlement for apps, fintech providers, and payment platforms within existing workflows.
 
-This repository contains only the immutable smart contracts, the deploy script, and the mock token used in tests.
+
+**This repository contains only the immutable smart contracts, the deploy script, and the mock token used in tests.**
 
 ---
 

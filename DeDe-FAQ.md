@@ -8,9 +8,9 @@
 DeDe is **not an app**, **not a marketplace**, and **not a company**. It is a minimal **delivery settlement rail** that runs on Ethereum.
 Think of it like:
 
-* **Bitcoin → money**
-* **Matrix → messaging**
-* **DeDe → physical delivery**
+* **Bitcoin -> money**
+* **Matrix -> messaging**
+* **DeDe -> physical delivery**
 
 These are **neutral protocols**, not platforms. They don’t provide apps, account systems, or surveillance layers. DeDe works the same way, it only handles **settlement** for deliveries.
 
@@ -36,7 +36,7 @@ DeDe allows anyone to:
 
 Once confirmed by both sides:
 
-* **0.5%** is taken as a **transaction fee**
+* **0.5%** is taken as a **protocol fee**
 * **99.5%** goes to the **carrier**
 
 This fee structure is **immutable** and enforced **on-chain** by the smart contract.
@@ -182,6 +182,9 @@ NFTs are:
 * Ideal for ownership transfers (e.g., cars, deeds, parcels)
 
 DeDe uses them as **parcel containers**.
+
+
+* **Further Technical Reading: [NFTs: Digital Containers for Real-World Assets](https://medium.com/@ekarlsson66/nfts-digital-containers-for-real-world-assets-a6f8fb001c65)**
 
 ---
 

@@ -202,6 +202,8 @@ A typical delivery in DeDe Protocol looks like this:
    * If parcel is still **Minted / Accepted / PickedUp / OutForDelivery** and never completed, the platform may dispute or cancel; finalization then refunds the platform if that branch is reached.
    * Parcel state: **Finalized**.
 
+   * **All on-chain fees (protocol fee, platform fee, and finalizer tip) are deducted from the carrier’s payout.** The sender never pays settlement fees after funding the escrow.
+
 8. **Disputes**
 
    * Platform can call `dispute(id, reasonHash)` when parcel is Dropped/Delivered.

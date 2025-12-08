@@ -2,7 +2,7 @@
 
 # Decentralized Delivery (DeDe) Protocol
 
-**Denctralized Crowdshipping Protocol (Peer-to-Peer Parcel)**
+**Decentralized Crowdshipping Protocol (Peer-to-Peer Parcel)**
 
 ---
 
@@ -26,13 +26,13 @@ By using, deploying, integrating, or interacting with this software in any form,
 
 ---
 
-## **DeDe Protocol: Trustless, Universal Delivery Settlement (Etherum-Mainnet)**
+## **DeDe Protocol: Trustless, Universal Delivery Settlement (Ethereum-Mainnet)**
 
 **DeDe Protocol** is a minimal, self-contained, production-ready settlement layer for decentralized delivery networks.
 
 **Peer-to-Peer Parcel** -> Pickup -> Dropoff -> Delivery confirmation.  
 
-**Defi/CeFi Agnostic:**
+**DeFi/CeFi Agnostic:**
 Easy integration of delivery settlement for apps, fintech providers, and payment platforms within existing workflows.
 
 
@@ -40,7 +40,7 @@ Easy integration of delivery settlement for apps, fintech providers, and payment
 
 ---
 
-## **Etherum Mainnet Deployment**
+## **Ethereum Mainnet Deployment**
 
 Official DeDe Protocol contract addresses:
 
@@ -111,13 +111,12 @@ DeDe uses NFTs as non-speculative infrastructure, not for art, not for collectib
 An NFT is simply a digital record of ownership for something non-fungible (i.e., unique and indivisible).
 Unlike ETH or BTC (which are fungible and can be split), an NFT always refers to one unique object.
 
-In DeDe, the NFT represents a parcel, with metadata like:
+In DeDe, the NFT parcel stores:
 
-parcelId
-
-lifecycleState (e.g., Created, PickedUp, Delivered)
-
-encrypted or hashed pickup/dropoff info
+* parcelId  
+* lifecycleState  
+* encrypted or hashed pickup/dropoff data  
+* route hash and evidence digest 
 
 DeDe does not “put the package on-chain.” The NFT anchors the parcel’s identity and lifecycle in a verifiable, tamper-proof way.
 If someone tries to spoof it, the metadata won’t match, fraud becomes detectable by design, not by policy.
@@ -143,8 +142,8 @@ The NFT model provides a deterministic, auditable, and trustless lifecycle, idea
 * ERC-721 parcels  
 * Pickup -> dropoff -> finalize lifecycle  
 * Automatic finalization after 72h if neither side finalizes  
-* Immutable Transaction fee (0.5%) paid to `protocolTreasury`  
-* Dynamic platform fee (3% -> 22%) paid to `platformTreasury`  
+* Immutable Protocol fee (0.5%) paid to `protocolTreasury`  
+* Dynamic Platform fee (3% -> 22%) paid to `platformTreasury`  
 * Permissionless finalization with a 0.05% finalizer tip  
 * Full slashing support through signer registry  
 * Emits deterministic events that indexers can build on  
@@ -153,7 +152,7 @@ The NFT model provides a deterministic, auditable, and trustless lifecycle, idea
 
 * Holds user funds until parcel completion  
 * Releases value automatically based on parcel state transitions  
-* Protocol and Transaction fees taken at payout time  
+* Protocol and platform fees are taken at payout time
 * Trusted by `ParcelCore` only  
 
 ### **3. AStarSignerRegistryStaked: oracle/signer registry**
@@ -172,12 +171,37 @@ Apps, UIs, APIs, routing engines, carrier apps, and SDKs live in separate reposi
 
 ---
 
+## **Finalization and Disputes**
+
+### **Finalization**
+
+   * After `finalizeAfter`, anyone may call `finalize(id)`.
+   * If parcel is in **Dropped** or **Delivered**:
+
+     * `Escrow.releaseWithFees` sends funds to carrier, platform treasury, protocol treasury, and finalizer (tip).
+   * If parcel is still **Minted / Accepted / PickedUp / OutForDelivery** and never completed, the platform may dispute or cancel; finalization then refunds the platform if that branch is reached.
+   * Parcel state: **Finalized**.
+
+   * **All on-chain fees (protocol fee, platform fee, and finalizer tip) are deducted from the carrier’s payout.** The sender never pays settlement fees after funding the escrow.
+
+### **Disputes**
+
+   * Platform can call `dispute(id, reasonHash)` when parcel is Dropped/Delivered.
+   * Owner (for example, a multisig or DAO) later calls `resolve(id, winner)` where `winner` is either the carrier or the platform.
+   * Depending on resolution:
+
+     * If `winner == carrier`: funds are released with fees as usual.
+     * Otherwise: full refund to platform.
+   * State becomes **Finalized** and a `Resolved` event is emitted.
+
+---
+
 ## **Quick Start (Local)**
 
 ### **Prerequisites**
 
-1. [foundry](https://getfoundry.sh/)
-2. [OpenZeppelin](https://www.openzeppelin.com/)
+[foundry](https://getfoundry.sh/)
+
 
 ### **1. Install and test**
 
@@ -214,7 +238,7 @@ forge script script/DeployProtocol.s.sol:DeployProtocol \
 
 ## **Security Model**
 
-* Transaction fee is immutable and cannot be changed post-deploy
+* Protocol fee is immutable and cannot be changed post-deploy
 * Platform fee can be tuned by the platform operator
 * `owner` of `ParcelCore` should be:
 
@@ -241,7 +265,7 @@ Any delivery app can adopt it without DeDe adopting your architecture.
 # **Official Canonical Deployment (Recommended for All Integrators)**
 
 DeDe Protocol official, on-chain canonical deployment.
-This deployment includes the immutable 0.5% transaction fee, which supports ongoing audits, tooling, SDKs, and ecosystem maintenance.
+This deployment includes the immutable 0.5% Protocol Fee, which supports ongoing audits, tooling, SDKs, and ecosystem maintenance.
 
 Integrators are encouraged to use this **official DeDe Protocol deployment** because:
 
@@ -252,7 +276,7 @@ Integrators are encouraged to use this **official DeDe Protocol deployment** bec
    Indexers, explorers, and SDKs will follow the official deployment.
 
 3. **Sustainability**
-   The immutable protocol fee funds maintenance without affecting platform economics.
+   The immutable Protocol Fee funds maintenance without affecting platform economics.
 
 ---
 
@@ -313,4 +337,16 @@ SOFTWARE.
 
 ---
 
+## **Contact**
+
 **[Contact Email](pablo-chacon-ai@proton.me)**
+
+---
+
+## **Further Reading**
+
+* **Technical: [NFTs: Digital Containers for Real-World Assets](https://medium.com/@ekarlsson66/nfts-digital-containers-for-real-world-assets-a6f8fb001c65)**
+
+* **Vision: [DeDe: The Delivery Rail for a Free World](https://medium.com/@ekarlsson66/dede-the-delivery-rail-for-a-free-world-e7be944b90fc)**
+
+

@@ -143,7 +143,7 @@ The NFT model provides a deterministic, auditable, and trustless lifecycle, idea
 * Pickup -> dropoff -> finalize lifecycle  
 * Automatic finalization after 72h if neither side finalizes  
 * Immutable Protocol fee (0.5%) paid to `protocolTreasury`  
-* Dynamic Platform fee (3% -> 22%) paid to `platformTreasury`  
+* Dynamic Platform fee (set by platform provider) paid to `platformTreasury`  
 * Permissionless finalization with a 0.05% finalizer tip  
 * Full slashing support through signer registry  
 * Emits deterministic events that indexers can build on  

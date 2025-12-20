@@ -26,6 +26,18 @@ By using, deploying, integrating, or interacting with this software in any form,
 
 ---
 
+## Protocol Finality & Immutability
+
+**DeDe Protocol is finished infrastructure.**
+
+The core smart contracts are intentionally minimal, deterministic, and **will not be modified, upgraded, or extended**. There is no upgrade path, governance mechanism, or maintainer intervention.
+
+DeDe is provided as neutral, general-purpose settlement infrastructure. Its behavior is fully defined by the deployed code and does not depend on any individual, organization, or ongoing development.
+
+All future innovation is expected to happen **off-chain or on top of the protocol**, without requiring changes to the protocol itself.
+
+---
+
 ## **DeDe Protocol: Trustless, Universal Delivery Settlement (Ethereum-Mainnet)**
 
 **DeDe Protocol** is a minimal, self-contained, production-ready settlement layer for decentralized delivery networks.

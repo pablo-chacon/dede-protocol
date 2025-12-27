@@ -120,30 +120,28 @@ Links to dede-templates repository.
 
 DeDe uses NFTs as non-speculative infrastructure, not for art, not for collectibles.
 
-An NFT is simply a digital record of ownership for something non-fungible (i.e., unique and indivisible).
-Unlike ETH or BTC (which are fungible and can be split), an NFT always refers to one unique object.
+An NFT is simply a globally unique, transferable state container. Unlike fungible assets such as ETH or BTC, an NFT represents exactly one indivisible object and carries authority through ownership.
 
-In DeDe, the NFT parcel stores:
+In DeDe, the parcel NFT binds together:
 
-* parcelId  
-* lifecycleState  
-* encrypted or hashed pickup/dropoff data  
-* route hash and evidence digest 
+* **parcelId**  
+* **lifecycleState**  
+* **escrow authority**
+* **encrypted or hashed pickup/dropoff data**  
+* **optional route hash and evidence digest** 
 
-DeDe does not “put the package on-chain.” The NFT anchors the parcel’s identity and lifecycle in a verifiable, tamper-proof way.
-If someone tries to spoof it, the metadata won’t match, fraud becomes detectable by design, not by policy.
+The protocol does not put the physical package on chain. The NFT anchors the parcel’s identity and lifecycle in a public, tamper-resistant state machine.
 
-* This same primitive can apply to:
+Possession of the NFT represents the right to advance the parcel lifecycle and finalize settlement. When physical custody changes, authority changes by transferring the token. No identity continuity, account system, or trusted coordinator is required.
+
+This same primitive can apply to:
 
 * Title deeds
-
 * Vehicle ownership
-
 * Event tickets
-
 * Physical access credentials
 
-The NFT model provides a deterministic, auditable, and trustless lifecycle, ideal for physical-world assets that change hands.
+In all cases, the NFT is not a representation of value or meaning. It is a deterministic capability that binds authority, state, and settlement to a single non-fungible object.
 
 ---
 

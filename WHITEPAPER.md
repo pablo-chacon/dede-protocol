@@ -15,15 +15,20 @@ DeDe is **not** a delivery service and does not operate vehicles, terminals, or 
 
 ## 1. Introduction
 
-Traditional delivery systems are often centralized, opaque, and slow to adapt. At the same time, there is an enormous, unused capacity in how people already move through cities by foot, bike, public transit, and cars. Many of these trips could carry parcels if there were a fair and secure way to coordinate them.
+Traditional delivery systems are often centralized, opaque, and slow to adapt. At the same time, there is enormous unused capacity in how people already move through cities by foot, bike, public transit, and car. This latent mobility resource could resolve many last-mile delivery challenges.
 
-DeDe Protocol addresses this gap by focusing on **the settlement rail only**:
+Many of these trips could carry parcels if there were a fair and secure way to coordinate them, and if the necessary infrastructure and incentives were present.
+
+DeDe Protocol addresses this gap by focusing **exclusively on the settlement rail**:
 
 * Who should get paid?
-* Under what conditions?
-* How do we minimize trust between sender, carrier, and app?
 
-All routing, UI, and product logic lives off-chain. The protocol itself only encodes a small, auditable state machine for parcels, escrow, and fees.
+* Under what conditions?
+
+* How can trust between sender, carrier, and application be minimized?
+
+
+All routing, user interfaces, and product logic live off-chain. The protocol itself encodes only a small, auditable state machine for parcels, escrow, and fees.
 
 ---
 
@@ -344,7 +349,7 @@ Some example integrations:
 * **Local Businesses**: Shops mint parcels for orders and let a network of carriers accept and deliver them, without signing opaque courier contracts.
 * **E-commerce Platforms**: Marketplaces integrate DeDe as a backend escrow layer for deliveries, keeping UX and branding fully in-house.
 * **Local Couriers**: Independent bike couriers and small delivery services integrate DeDe as a settlement backend while retaining full operational control.
-* **Research Pilots**: Universities and NGOs experiment with decentralized logistics and trust-minimized payouts, while keeping code and treasury flows transparent.
+* **Research Pilots**: Universities and NGOs experiment with decentralized logistics and trust-minimized payouts, while keeping code and treasury flows transparent. 
 
 These **examples are illustrative** only and do not imply any endorsement, recommendation, or required implementation pattern.
 

@@ -39,6 +39,9 @@ DeDe is designed to be:
 * **Predictable**: Protocol fee is immutable; platform fees are explicit and bounded in BPS.
 * **Legible**: Parcel lifecycle and events are deterministic, so indexers and explorers can reason about them.
 
+
+Any **off-chain** workflows, routing strategies, dispute policies, or UX flows described in this document are illustrative only and are **not** required, enforced, or validated by the DeDe Protocol.
+
 ---
 
 ## 3. System Overview
@@ -50,6 +53,15 @@ The canonical DeDe Protocol deployment consists of three contracts:
 3. **AStarSignerRegistryStaked**: Staked registry for A* routing signers.
 
 The protocol is chain-agnostic across EVM networks and is implemented with Solidity 0.8.24 and modern tooling (Foundry).
+
+### 3.1 Canonical Deployment
+
+DeDe Protocol is deployed on Ethereum mainnet.
+
+ParcelCore (ERC-721):
+https://etherscan.io/token/0xeF1D4970c3B988840B13761Ec4FBb85106d789F8
+
+**The deployment is immutable and permissionless. No upgrades or governance actions are possible.**
 
 ---
 
@@ -84,7 +96,9 @@ The protocol enforces **automatic finalization**:
 
 This removes the need for a centralized cron server or off-chain keeper.
 
-**Important:** DeDe Protocol does **not** implement any time-based *value decay* of the escrowed amount. The principal funds remain intact until release or refund. Any “value drop” or pricing policy over time is entirely an off-chain concern of the app and/or marketplace.
+**Important:** DeDe Protocol does **not** implement any time-based **value decay** of the escrowed amount. The principal funds remain intact until release or refund. Any “value drop” or pricing policy over time is entirely an off-chain concern of the app and/or marketplace.
+
+**All off-chain logic is the platform responsibility.**
 
 #### Platform Fee Calculation
 
@@ -99,7 +113,7 @@ The exact schedule is up to the operator (for example, a range from 3% to 22%). 
 * Platform fee is **explicit**, bounded by 0–100% and configured on-chain.
 * Payout always uses a single BPS value per parcel when funds are released.
 
-The recommended deployment script sets an initial schedule but operators are free to adjust it within sane bounds.
+The example deployment script sets an initial schedule but operators are free to adjust it within sane bounds.
 
 ### 4.2 Escrow: Token & ETH Settlement
 
@@ -136,13 +150,16 @@ Core functions:
 
 `ParcelCore.dropoff(...)` requires that the provided `astarSigner` is currently allowed in the registry. This ties the on-chain dropoff event to off-chain route computation that is at least **economically bonded**.
 
+Use of the **AStarSignerRegistryStaked contract** is optional and intended for deployments that want economically bonded routing attestations. 
+**Applications may ignore or replace this mechanism entirely**.
+
 ---
 
 ## 5. Parcel Lifecycle
 
 A typical delivery in DeDe Protocol looks like this:
 
-1. **Creation (Mint)**
+### 5.1 Creation (Mint)
 
    * A platform calls `mintParcel(...)` with:
 
@@ -154,24 +171,24 @@ A typical delivery in DeDe Protocol looks like this:
    * `Escrow.fund` is invoked and holds the funds.
    * Parcel is in state **Minted** and owned by the platform (ERC-721).
 
-2. **Acceptance**
+### 5.2 Acceptance
 
    * A carrier calls `accept(id, stakeAmount)`.
    * Protocol records `carrier` and `stakeAmount` (informational).
    * Parcel state: **Accepted**.
 
-3. **Pickup**
+### 5.3 Pickup
 
    * Carrier calls `pickup(id, coarseCellHash)`.
    * Protocol records `pickupAt` and sets `finalizeAfter = pickupAt + 72 hours`.
    * Parcel state: **PickedUp**.
 
-4. **Out For Delivery**
+### 5.4 Out For Delivery
 
    * Carrier calls `markOutForDelivery(id)`.
    * Parcel state: **OutForDelivery**.
 
-5. **Dropoff**
+### 5.5 Dropoff
 
    * Carrier calls:
 
@@ -188,12 +205,12 @@ A typical delivery in DeDe Protocol looks like this:
    * `routeHash`, `photoCid`, and `photoDigest` are stored along with `dropoffAt`.
    * Parcel state: **Dropped**.
 
-6. **Delivery Confirmation (optional but typical)**
+### 5.6 Delivery Confirmation (optional but typical)
 
    * Receiver calls `deliver(id)`.
    * Parcel state: **Delivered**.
 
-7. **Finalization**
+### 5.7 Finalization
 
    * After `finalizeAfter`, anyone may call `finalize(id)`.
    * If parcel is in **Dropped** or **Delivered**:
@@ -204,7 +221,7 @@ A typical delivery in DeDe Protocol looks like this:
 
    * **All on-chain fees (protocol fee, platform fee, and finalizer tip) are deducted from the carrier’s payout.** The sender never pays settlement fees after funding the escrow.
 
-8. **Disputes**
+### 5.8. Disputes
 
    * Platform can call `dispute(id, reasonHash)` when parcel is Dropped/Delivered.
    * Owner (for example, a multisig or DAO) later calls `resolve(id, winner)` where `winner` is either the carrier or the platform.
@@ -213,6 +230,9 @@ A typical delivery in DeDe Protocol looks like this:
      * If `winner == carrier`: funds are released with fees as usual.
      * Otherwise: full refund to platform.
    * State becomes **Finalized** and a `Resolved` event is emitted.
+
+Dispute resolution reflects a decision made by the platform’s own governance or legal process. 
+DeDe Protocol does not investigate, adjudicate, or verify real-world facts.
 
 ---
 
@@ -323,7 +343,10 @@ Some example integrations:
 * **Urban Side-Hustle Apps**: Individuals deliver parcels during commutes; the app handles matching and routing, DeDe handles settlement.
 * **Local Businesses**: Shops mint parcels for orders and let a network of carriers accept and deliver them, without signing opaque courier contracts.
 * **E-commerce Platforms**: Marketplaces integrate DeDe as a backend escrow layer for deliveries, keeping UX and branding fully in-house.
+* **Local Couriers**: Independent bike couriers and small delivery services integrate DeDe as a settlement backend while retaining full operational control.
 * **Research Pilots**: Universities and NGOs experiment with decentralized logistics and trust-minimized payouts, while keeping code and treasury flows transparent.
+
+These **examples are illustrative** only and do not imply any endorsement, recommendation, or required implementation pattern.
 
 Because DeDe is only the settlement layer, multiple, mutually incompatible apps can share the same on-chain rails without coordination.
 
